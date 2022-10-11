@@ -23,7 +23,11 @@ app.get('/logs/new', (req, res) => {
 })
 
 
-
+//CREATE
+app.post('/logs', (req, res) => {
+    req.body = true, req.body = false
+   res.send(req.body)
+})
 
 // Tell the app to listen on a port
 app.listen(3000, () => {
