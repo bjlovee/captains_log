@@ -17,9 +17,16 @@ app.set('view engine', 'jsx') // register the jsx view engine
 // //   console.log('connected to MongoDB Atlas')
 // })
 
+//INDEX
+app.get('/logs', (req, res) => {
+    res.send('index')
+})
+
+
+
 //NEW
 app.get('/logs/new', (req, res) => {
-    res.render('logs//New')
+    res.render('logs/New')
 })
 
 
@@ -27,6 +34,7 @@ app.get('/logs/new', (req, res) => {
 app.post('/logs', (req, res) => {
     req.body = true, req.body = false
    res.send(req.body)
+   res.redirect('/show')
 })
 
 // Tell the app to listen on a port
