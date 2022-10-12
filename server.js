@@ -2,8 +2,8 @@
 // Require modules
 const fs = require('fs') // this engine requires the fs module like we did Saturday
 const express = require('express')
-// const mongoose = require('mongoose')
-const methodOverride = require('method-override')
+const mongoose = require('mongoose')
+// const methodOverride = require('method-override')
 // const { application } = require("express");
 
 //Created our express app
