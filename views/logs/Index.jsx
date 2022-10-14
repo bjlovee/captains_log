@@ -1,16 +1,37 @@
 const React = require('react');
-const Logs = require('../../models/logs');
+const Default = require('../layouts/Default.jsx')
+
 
 class Index extends React.Component{
     render(){
+        const {logs} = this.props
         return(
-            <>
-                <h1>Create Page</h1>
+            <Default title="logs Index Page">
                 <ul>
-                    <a href="/logs">Go To Create Page</a> 
-                   
-                </ul>
-            </>
+                    {
+                        logs.map((log) => {
+                            const {title, entry, shipIsBroken} = log
+                            return (
+                                <li key={log._id}>
+                                    <a href={`/logs/${log._id}`}>
+                                    {title}</a> is {entry}
+                                    
+                                     <br/>
+                                    {
+                                        shipIsBroken? 
+                                        'It\'s shipIsBroken':
+                                        'It\'s not shipIsBroken'
+                                    }
+                                    <br/>
+                                    <form method="POST" action={`/logs/${log._id}?_method=DELETE`}>
+                                        <input type="submit" value={`Delete ${entry} ${title}`}/>
+                                    </form>
+                                </li>
+                            )
+                        })
+                    }
+                </ul> 
+            </Default>
         )
     }
 }
