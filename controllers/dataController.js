@@ -45,7 +45,7 @@ const dataController = {
     },
     //Create
     create(req, res, next){
-        req.body.shipIsBroken= req.body.shipIsBroken=== 'on'? true : false;
+        req.body.shipIsBroken = req.body.shipIsBroken=== 'on'? true : false;
         Logs.create(req.body, (err, createdLogs)=> {
             if(err){
                 res.status(400).send({
