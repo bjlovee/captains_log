@@ -19,12 +19,12 @@ class Index extends React.Component{
                                      <br/>
                                     {
                                         shipIsBroken? 
-                                        'It\'s shipIsBroken':
-                                        'It\'s not shipIsBroken'
+                                        'Ship Is Broken':
+                                        'Ship Is 100% Working'
                                     }
                                     <br/>
-                                    <form method="POST" action={`/logs/${log._id}?_method=DELETE`}>
-                                        <input type="submit" value={`Delete ${entry} ${title}`}/>
+                                    <form method="POST" action={`/logs/${logs._id}?_method=DELETE`}>
+                                        <input type="submit" value={`Delete ${title} ${entry}`}/>
                                     </form>
                                 </li>
                             )

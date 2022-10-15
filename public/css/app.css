@@ -1,0 +1,20 @@
+body {
+    background: url(https://s.yimg.com/uu/api/res/1.2/a823QK6kxS74PnxVWB_0Hw--~B/aD0zNTA7dz01ODA7YXBwaWQ9eXRhY2h5b24-/https://www.blogcdn.com/massively.joystiq.com/media/2010/01/captainslogheader02.jpg);
+    margin: 0;
+    font-family: monospace;
+    color: aliceblue;
+    height: 100%;
+    background-position: center;
+    /* background-repeat: no-repeat; */
+    background-size: cover;
+}
+
+a{
+    color: aliceblue;
+    text-shadow: 1px 1px 1px rgb(217, 25, 25);
+    font-size: 1.5em;
+}
+
+a:hover{
+    color: rgb(52, 247, 38);
+}

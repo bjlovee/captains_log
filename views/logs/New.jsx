@@ -11,7 +11,7 @@ class New extends React.Component {
             <form method='POST' action="/logs">
                 Title: <input type="text" name="title" placeholder='title of Log Here'></input><br/>
                 Entry: <input type="text" name="entry" placeholder='entry of Log Here'></input><br/>
-                Is Ready To Eat: <input type="checkbox" title="shipIsBroken"></input><br/>
+                Ship Is Broken: <input type="checkbox" title="shipIsBroken"></input><br/>
                 <input type="submit" value="Submit Log"></input>
             </form>
             </Default>
